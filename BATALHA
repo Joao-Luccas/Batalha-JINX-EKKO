@@ -1,0 +1,30 @@
+print("=" * 35)
+print("Olá, seja bem-vindo a Batalha!")
+print("=" * 35)
+VDJ = int(input("Digite o valor da vida de Jinx -> "))
+VDE = int(input("Digite o valor da vida de Ekko -> "))
+print("=" * 40)
+ATQJ = int(input("Digite os ataques de Jinx -> "))
+for PWRJ in range (ATQJ):
+    PWRJ = int(input("Digite o valor do poder de jinx -> "))
+    if VDJ < VDE:
+        VDE -= PWRJ/2
+    elif VDJ >= VDE:
+        VDE -= PWRJ
+    if VDE <= 0:
+        print("Jinx foi a vencedora com {} de vida!".format(VDJ))
+print(f"Vida de Ekko -> {VDE}")
+print("=" * 40)
+ATQE = int(input("Digite os ataques de Ekko -> "))
+for PWRE in range (ATQE):
+    PWRE = int(input("Digite o valor do poder de Ekko -> "))
+    if VDE < VDJ:
+        VDJ -= PWRE//2
+    elif VDE >= VDJ:
+        VDJ -= PWRE
+if VDJ <= 0:
+    print(f"Ekko foi o vencedor com {VDE} de vida!")
+elif VDJ == VDE:
+     print("Houve um empate!")
+else:
+     print(f"Ekko foi o vencedor com {VDE} de vida!")
