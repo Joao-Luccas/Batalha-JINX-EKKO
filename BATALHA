@@ -12,7 +12,9 @@ for PWRJ in range (ATQJ):
     elif VDJ >= VDE:
         VDE -= PWRJ
     if VDE <= 0:
+        VDE = 0
         print("Jinx foi a vencedora com {} de vida!".format(VDJ))
+        break
 print(f"Vida de Ekko -> {VDE}")
 print("=" * 40)
 ATQE = int(input("Digite os ataques de Ekko -> "))
@@ -23,7 +25,9 @@ for PWRE in range (ATQE):
     elif VDE >= VDJ:
         VDJ -= PWRE
 if VDJ <= 0:
+    VDJ = 0
     print(f"Ekko foi o vencedor com {VDE} de vida!")
+    break
 elif VDJ == VDE:
      print("Houve um empate!")
 else:
