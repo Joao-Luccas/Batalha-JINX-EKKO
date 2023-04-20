@@ -1,0 +1,14 @@
+import random
+n = random.randint(1, 100)
+c = 1
+while True:
+    numero = int(input("Escolha um numero -> "))
+    if n < numero:
+        print("Menor!")
+        c = c + 1
+    elif n > numero:
+        print("Maior")
+        c = c + 1
+    else:
+        print("Acertou em {} tentativas ".format(c))
+        break
